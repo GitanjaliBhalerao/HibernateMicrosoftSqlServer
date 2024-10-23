@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- SQL Server Dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+        
+        <!-- JDBC Driver Class for SQL Server -->
+        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        
+        <!-- Connection URL - using integrated security for Windows Authentication -->
+        <property name="hibernate.connection.url">jdbc:sqlserver://INHNJLPT-974192:1433;databaseName=master;integratedSecurity=true;encrypt=true;trustServerCertificate=true</property>
+        
+        <!-- Remove username and password for Windows Authentication -->
+        <property name="hibernate.connection.username">MYCORP\gbb919982</property>
+        <property name="hibernate.connection.password"></property>
+        
+        <!-- Hibernate property to manage database schema updates -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        
+        <property name="hibernate.transaction.jta.platform">org.hibernate.service.jta.JtaServiceLocator</property>
+        
+        <!-- Show SQL queries in the console -->
+        <property name="hibernate.show_sql">true</property>
+        
+          <!-- Explicit mapping of entities -->
+        <mapping class="com.example.entity.Book" />
+    </session-factory>
+</hibernate-configuration>
