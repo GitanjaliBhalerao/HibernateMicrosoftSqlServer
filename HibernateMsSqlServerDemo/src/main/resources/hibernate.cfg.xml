@@ -12,10 +12,10 @@
         <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
         
         <!-- Connection URL - using integrated security for Windows Authentication -->
-        <property name="hibernate.connection.url">jdbc:sqlserver://INHNJLPT-974192:1433;databaseName=master;integratedSecurity=true;encrypt=true;trustServerCertificate=true</property>
+        <property name="hibernate.connection.url">jdbc:sqlserver://instance_name:1433;databaseName=master;integratedSecurity=true;encrypt=true;trustServerCertificate=true</property>
         
         <!-- Remove username and password for Windows Authentication -->
-        <property name="hibernate.connection.username">MYCORP\gbb919982</property>
+        <property name="hibernate.connection.username">username</property>
         <property name="hibernate.connection.password"></property>
         
         <!-- Hibernate property to manage database schema updates -->
